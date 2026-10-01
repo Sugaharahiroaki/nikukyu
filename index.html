@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>おにぎり〜NIKUKYU〜｜握り立てのおにぎり専門キッチンカー（大阪）</title>
+<meta name="description" content="南魚沼産コシヒカリと三陸沖の海苔。ご注文をいただいてから握る、温かいおにぎり専門のキッチンカー。大阪府内のイベント・マルシェに出店中。平日はご予約・まとめ注文も。">
+<meta property="og:title" content="おにぎり〜NIKUKYU〜｜握り立てのおにぎり専門キッチンカー">
+<meta property="og:description" content="南魚沼産コシヒカリと三陸沖の海苔。ご注文をいただいてから握る、温かいおにぎりを大阪のイベントで。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-1.webp">
+<meta name="theme-color" content="#22407f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="assets/site.js"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- ロゴ：Instagram のプロフィール画像（紺の輪・肉球・おにぎり）を元に、拡大してもにじまないよう線で描き直したもの -->
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="46" fill="var(--logo-bg, #ffffff)" stroke="var(--logo-ring, #22407f)" stroke-width="5"/>
+    <g fill="var(--logo-ink, #141518)">
+      <ellipse cx="23" cy="40" rx="6.4" ry="8.6" transform="rotate(-26 23 40)"/>
+      <ellipse cx="38.5" cy="25.5" rx="6.4" ry="8.6" transform="rotate(-9 38.5 25.5)"/>
+      <ellipse cx="61.5" cy="25.5" rx="6.4" ry="8.6" transform="rotate(9 61.5 25.5)"/>
+      <ellipse cx="77" cy="40" rx="6.4" ry="8.6" transform="rotate(26 77 40)"/>
+      <path d="M50 35.5c6.5 0 12 6.5 18.5 20.5 4 8.6 7.5 18 3.5 23.2-4.6 5.8-39.4 5.8-44 0-4-5.2-.5-14.6 3.5-23.2C38 42 43.5 35.5 50 35.5z"/>
+    </g>
+    <path d="M50 39.5c4.2 0 8 4.2 11.3 10.8-3.4 2-7.4 2.9-11.3 2.9s-7.9-.9-11.3-2.9C42 43.7 45.8 39.5 50 39.5z" fill="#ffffff"/>
+    <text x="50" y="69.5" text-anchor="middle" font-family="'Zen Kaku Gothic New','Hiragino Sans',sans-serif" font-weight="700" font-size="11.5" fill="#ffffff" letter-spacing=".3">おにぎり</text>
+    <text x="50" y="78.5" text-anchor="middle" font-family="'Zen Kaku Gothic New','Hiragino Sans',sans-serif" font-weight="700" font-size="4.8" fill="#ffffff" letter-spacing=".6">~NIKUKYU~</text>
+  </symbol>
+  <symbol id="paw" viewBox="0 0 24 24">
+    <g fill="currentColor">
+      <ellipse cx="5.2" cy="9.6" rx="2" ry="2.7" transform="rotate(-26 5.2 9.6)"/>
+      <ellipse cx="9.4" cy="5.6" rx="2" ry="2.7" transform="rotate(-9 9.4 5.6)"/>
+      <ellipse cx="14.6" cy="5.6" rx="2" ry="2.7" transform="rotate(9 14.6 5.6)"/>
+      <ellipse cx="18.8" cy="9.6" rx="2" ry="2.7" transform="rotate(26 18.8 9.6)"/>
+      <path d="M12 9.2c2 0 3.6 2 5.4 5.6 1.1 2.3 2 4.6.9 6-1.4 1.7-11.2 1.7-12.6 0-1.1-1.4-.2-3.7.9-6C8.4 11.2 10 9.2 12 9.2z"/>
+    </g>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24">
+    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<a class="sr-only" href="#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="logo" href="#top" aria-label="おにぎり〜NIKUKYU〜 トップへ">
+      <svg class="logo__mark" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="logo__name">おにぎり<small>~NIKUKYU~</small></span>
+    </a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="#kodawari">こだわり</a>
+      <a href="#menu-sec">メニュー</a>
+      <a href="#shutten">出店について</a>
+      <a href="#owner">店主のこと</a>
+      <a href="#bulk">まとめ注文</a>
+      <a class="btn btn--ai" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>出店予定</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__lines" aria-hidden="true"></span>メニュー
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="menu" aria-label="メニュー">
+  <div class="menu__top">
+    <svg class="logo__mark" aria-hidden="true"><use href="#logo"/></svg>
+    <button class="menu__close" type="button" data-menu-close>閉じる</button>
+  </div>
+  <nav class="menu__list" aria-label="メニュー">
+    <a href="#kodawari" data-menu-close>こだわり <span>Rice &amp; Nori</span></a>
+    <a href="#menu-sec" data-menu-close>メニュー <span>Menu</span></a>
+    <a href="#shutten" data-menu-close>出店について <span>Where to find us</span></a>
+    <a href="#owner" data-menu-close>店主のこと <span>Owner</span></a>
+    <a href="#bulk" data-menu-close>まとめ注文 <span>Catering</span></a>
+    <a href="#contact" data-menu-close>ご予約・お問い合わせ <span>Contact</span></a>
+  </nav>
+  <div class="menu__foot">
+    <span>おにぎり専門キッチンカー｜大阪府</span>
+    <span>平日はご予約制・出店のご依頼も Instagram の DM から</span>
+    <a class="btn btn--white" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>@onigiri_nikukyu</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ========== 最初の画面 ========== -->
+<section id="top" class="hero">
+  <div class="slides" aria-hidden="true">
+    <div class="slide is-active"><img src="img/hero-1.webp" alt="" width="1344" height="752" fetchpriority="high"></div>
+    <div class="slide"><img src="img/hero-2.webp" alt="" width="1168" height="880" loading="lazy"></div>
+    <div class="slide"><img src="img/hero-3.webp" alt="" width="1170" height="1150" loading="lazy"></div>
+    <div class="slide"><img src="img/hero-4.webp" alt="" width="1024" height="1024" loading="lazy"></div>
+  </div>
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow"><svg class="paw" aria-hidden="true"><use href="#paw"/></svg>おにぎり専門キッチンカー ─ 大阪</p>
+      <p class="hero__lead">南魚沼産コシヒカリと、三陸沖の海苔。ご注文をいただいてから握る、温かいおにぎりです。白い軽トラのキッチンカーで、大阪府内のイベントやマルシェへ。</p>
+      <div class="hero__actions">
+        <a class="btn btn--white" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>出店予定を見る</a>
+        <a class="btn btn--ghost" href="#menu-sec">メニュー <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="hero__facts">
+        <li>2025年8月オープン</li>
+        <li>平日はご予約制</li>
+        <li>出店のご依頼受付中</li>
+      </ul>
+    </div>
+    <h1 class="hero__title">
+      <span class="line"><span>握り立てを、</span></span>
+      <span class="line"><span>いちばん<span class="ac">おいしい</span></span></span>
+      <span class="line"><span>瞬間に。</span></span>
+    </h1>
+  </div>
+  <div class="slides__ctrl" role="group" aria-label="写真の切り替え">
+    <button class="slides__dot is-active" type="button" aria-label="写真 1" aria-current="true"></button>
+    <button class="slides__dot" type="button" aria-label="写真 2"></button>
+    <button class="slides__dot" type="button" aria-label="写真 3"></button>
+    <button class="slides__dot" type="button" aria-label="写真 4"></button>
+    <button class="slides__pause" type="button" aria-pressed="false" aria-label="自動再生を一時停止"><span aria-hidden="true">❚❚</span></button>
+  </div>
+  <p class="scroll-cue" aria-hidden="true">Scroll</p>
+</section>
+
+<!-- 流れる帯 -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span class="ticker__item">握り立て<svg class="paw"><use href="#paw"/></svg>南魚沼産コシヒカリ<svg class="paw"><use href="#paw"/></svg>三陸沖の海苔<svg class="paw"><use href="#paw"/></svg>大阪のキッチンカー<svg class="paw"><use href="#paw"/></svg>@onigiri_nikukyu<svg class="paw"><use href="#paw"/></svg></span>
+    <span class="ticker__item">握り立て<svg class="paw"><use href="#paw"/></svg>南魚沼産コシヒカリ<svg class="paw"><use href="#paw"/></svg>三陸沖の海苔<svg class="paw"><use href="#paw"/></svg>大阪のキッチンカー<svg class="paw"><use href="#paw"/></svg>@onigiri_nikukyu<svg class="paw"><use href="#paw"/></svg></span>
+  </div>
+</div>
+
+<!-- ========== 宣言 ========== -->
+<section class="sec">
+  <div class="wrap state">
+    <h2 class="h2" data-reveal>おにぎりは、<br>握った瞬間が、<br>いちばんおいしい。</h2>
+    <div class="state__body">
+      <p class="lead" data-reveal>だから NIKUKYU は、ご注文をいただいてから握ります。炊きたてのお米が手のひらの熱でほどよく落ち着き、海苔はパリッとしたまま。少しだけお待たせしますが、その数分が、いちばんおいしい状態でお渡しするための時間です。</p>
+      <p data-reveal>お米は南魚沼産のコシヒカリ、海苔は三陸沖のもの。具材は定番に加えて、季節の期間限定も。「おにぎりって、こんなに違うんだ」と言っていただけるように、一個ずつ握っています。</p>
+      <ul class="facts" data-reveal>
+        <li><span>Open</span><strong>2025年8月</strong></li>
+        <li><span>Area</span><strong>大阪府内</strong></li>
+        <li><span>Style</span><strong>軽トラのキッチンカー</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== こだわり ========== -->
+<section id="kodawari" class="sec sec--tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal>こだわり</p>
+      <h2 class="h2" data-reveal>お米、海苔、具。<br>そして、握る手。</h2>
+      <p class="lead" data-reveal>材料は三つしかないからこそ、どれも手を抜けません。四つめのこだわりは、握る順番と時間です。</p>
+    </div>
+    <div class="kodawari">
+      <article class="kw">
+        <figure class="kw__media" data-reveal><img src="img/rice.webp" alt="枡に盛った白米と稲穂、海苔、梅干し" width="1168" height="880" loading="lazy" data-parallax="8"></figure>
+        <div class="kw__text">
+          <p class="kw__kanji" data-reveal>米 <small>Rice</small></p>
+          <h3 class="h3" data-reveal>南魚沼産コシヒカリ。</h3>
+          <p data-reveal>「冷めてもおいしい」で知られる南魚沼のコシヒカリを、その日の分だけ炊きます。粒が立ち、噛むほどに甘い。握ったときにつぶれず、口の中でほどける硬さに炊き上げます。</p>
+        </div>
+      </article>
+      <article class="kw">
+        <figure class="kw__media" data-reveal><img src="img/nori.webp" alt="三陸沖の板海苔" width="620" height="440" loading="lazy" data-parallax="8"></figure>
+        <div class="kw__text">
+          <p class="kw__kanji" data-reveal>海苔 <small>Nori</small></p>
+          <h3 class="h3" data-reveal>三陸沖の海苔を、食べる直前に。</h3>
+          <p data-reveal>香りの強い三陸沖の海苔を選び、袋から出すのはお渡しの直前。パリッとした歯ざわりと磯の香りが、炊きたてのお米と出会う瞬間を逃さないためです。</p>
+        </div>
+      </article>
+      <article class="kw">
+        <figure class="kw__media" data-reveal><img src="img/cut.webp" alt="鮭おにぎりの断面。ほぐした鮭がたっぷり入っている" width="1024" height="1024" loading="lazy" data-parallax="8"></figure>
+        <div class="kw__text">
+          <p class="kw__kanji" data-reveal>具 <small>Fillings</small></p>
+          <h3 class="h3" data-reveal>ごはんに負けない量を。</h3>
+          <p data-reveal>定番の鮭、梅、ツナマヨに加えて、なす味噌のような季節の期間限定も。どれも真ん中にしっかり入れて、どこから食べても具にたどり着くように。断面を見れば、わかります。</p>
+        </div>
+      </article>
+      <article class="kw">
+        <figure class="kw__media" data-reveal><img src="img/hands.webp" alt="湯気の立つごはんを両手で握るところ" width="1168" height="880" loading="lazy" data-parallax="8"></figure>
+        <div class="kw__text">
+          <p class="kw__kanji" data-reveal>手 <small>Hands</small></p>
+          <h3 class="h3" data-reveal>ご注文をいただいてから、握ります。</h3>
+          <p data-reveal>作り置きはしません。温かいまま、海苔を巻いて、手渡しで。コンビニのおにぎりとはまったく別のもの、と思っていただけるはずです。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== メニュー ========== -->
+<section id="menu-sec" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal>メニュー</p>
+      <h2 class="h2" data-reveal>定番の六つと、季節の一つ。</h2>
+      <p class="lead" data-reveal>その日のラインナップは、車の前の黒板と Instagram でお知らせします。</p>
+    </div>
+    <div class="menu-grid">
+      <article class="dish">
+        <div class="dish__pic"><img src="img/menu-sake.webp" alt="鮭のおにぎり" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">鮭 <small>SAKE</small></h3><p class="dish__desc">定番。ほぐした鮭をたっぷりと。</p></div>
+      </article>
+      <article class="dish">
+        <div class="dish__pic"><img src="img/menu-ume.webp" alt="梅のおにぎり" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">梅 <small>UME</small></h3><p class="dish__desc">果肉たっぷりの梅干し。コシヒカリの甘さが引き立ちます。</p></div>
+      </article>
+      <article class="dish">
+        <div class="dish__pic"><img src="img/menu-tuna.webp" alt="ツナマヨのおにぎり" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">ツナマヨ <small>TUNA</small></h3><p class="dish__desc">お子さまにも人気。ねぎを少し。</p></div>
+      </article>
+      <article class="dish">
+        <div class="dish__pic"><img src="img/menu-shio.webp" alt="塩むすび" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">塩むすび <small>SHIO</small></h3><p class="dish__desc">お米と塩と海苔だけ。いちばん差が出る一個。</p></div>
+      </article>
+      <article class="dish">
+        <span class="dish__tag">期間限定</span>
+        <div class="dish__pic"><img src="img/menu-nasu.webp" alt="なす味噌のおにぎり" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">なす味噌 <small>NASU</small></h3><p class="dish__desc">とろりと炊いたなすを甘辛い味噌で。秋の限定。</p></div>
+      </article>
+      <article class="dish">
+        <div class="dish__pic"><img src="img/menu-saba.webp" alt="焼きさばのおにぎり" width="304" height="304" loading="lazy"></div>
+        <div class="dish__label"><h3 class="dish__name">焼きさば <small>SABA</small></h3><p class="dish__desc">脂ののったさばを焼いてほぐして。</p></div>
+      </article>
+    </div>
+    <div class="menu-note" data-reveal>
+      <p class="menu-note__price">1個 300円<small>〜</small></p>
+      <p>具材によって価格が変わります。売り切れ次第終了。まとめてのご注文は平日のご予約で承ります（下記「まとめ注文」をご覧ください）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== キッチンカー ========== -->
+<section id="truck" class="band">
+  <div class="band__media"><img src="img/truck.webp" alt="白い軽トラのキッチンカー。横に紺色の肉球のロゴ" width="1566" height="1046" loading="lazy" data-parallax="10"></div>
+  <div class="wrap band__text">
+    <p class="eyebrow" data-reveal>キッチンカー</p>
+    <h2 class="h2" data-reveal>白い軽トラに、<br>紺の肉球が目印。</h2>
+    <p data-reveal>全長 3.5m の小さなキッチンカーに、炊飯の道具と海苔と具材を積んで、大阪府内のイベント・マルシェ・オフィス街へ。窓の肉球マークを見かけたら、ぜひ声をかけてください。</p>
+    <ul class="spec" data-reveal>
+      <li>全長 346cm</li>
+      <li>全幅 153cm</li>
+      <li>高さ 251cm</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== 出店について ========== -->
+<section id="shutten" class="sec sec--tint">
+  <div class="wrap shutten">
+    <figure class="shutten__media" data-reveal><img src="img/event.webp" alt="夏祭りの提灯の下、キッチンカーに並ぶ人たち" width="640" height="880" loading="lazy" data-parallax="8"></figure>
+    <div class="shutten__body">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow" data-reveal>出店について</p>
+        <h2 class="h2" data-reveal>週末はイベントへ。<br>平日はご予約で。</h2>
+      </div>
+      <ul class="plan">
+        <li data-reveal>
+          <span class="plan__when">週末・祝日</span>
+          <div class="plan__what"><strong>イベント・マルシェに出店</strong><span>出店先と時間は、その週の Instagram でお知らせします。売り切れ次第終了です。</span></div>
+        </li>
+        <li data-reveal>
+          <span class="plan__when">平日</span>
+          <div class="plan__what"><strong>ご予約のみ</strong><span>会社や施設への配達、まとめてのご注文は、平日に限りご予約を承ります。Instagram の DM からどうぞ。</span></div>
+        </li>
+        <li data-reveal>
+          <span class="plan__when">出店のご依頼</span>
+          <div class="plan__what"><strong>イベント主催の方へ</strong><span>お祭り、マルシェ、企業や学校のイベントなど。日程・場所・想定人数を DM でお知らせください。</span></div>
+        </li>
+      </ul>
+      <div class="cal" data-reveal>
+        <div class="cal__head"><h3 class="h3">今週の出店予定</h3><span>更新：毎週月曜（例）</span></div>
+        <ul>
+          <li><span class="cal__date">10/3（土）</span><span class="cal__place">だんじり祭 会場前の広場<em class="cal__tag">イベント</em></span><span class="cal__time">10:00〜売り切れまで</span></li>
+          <li><span class="cal__date">10/4（日）</span><span class="cal__place">河川敷グラウンド 少年野球大会<em class="cal__tag">イベント</em></span><span class="cal__time">8:00〜13:00</span></li>
+          <li><span class="cal__date">10/7（水）</span><span class="cal__place">会社・施設へのお届け<em class="cal__tag">平日ご予約</em></span><span class="cal__time">前日までに DM</span></li>
+        </ul>
+      </div>
+      <div class="shutten__actions" data-reveal>
+        <a class="btn btn--ai" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>最新の出店予定を見る</a>
+        <span class="handle">@onigiri_nikukyu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 店主のこと ========== -->
+<section id="owner" class="sec sec--ai">
+  <div class="wrap owner">
+    <div class="owner__body">
+      <p class="eyebrow" data-reveal>店主のこと</p>
+      <h2 class="h2" data-reveal>工場から、<br>キッチンカーへ。</h2>
+      <p data-reveal>ずっと製造業で働いてきました。飲食の経験は、ありませんでした。それでも「自分の手で作ったものを、目の前の人に食べてもらいたい」という気持ちが消えず、人生をかけてキッチンカーを買いました。</p>
+      <p data-reveal>選んだのは、おにぎり。毎日の食べものだからこそ、お米と海苔でごまかしがきかない。だから、いちばんだと思うお米と海苔を選び、ご注文をいただいてから握る。工場で覚えた「決めたことを、毎日同じように守る」まじめさで、夫婦ふたり、一個ずつ向き合っています。</p>
+      <div class="owner__name" data-reveal>
+        <strong>柴田 佳典</strong>
+        <span>おにぎり〜NIKUKYU〜 店主</span>
+      </div>
+    </div>
+    <div class="owner__media">
+      <figure class="owner__main" data-reveal><img src="img/hands.webp" alt="店主がおにぎりを握る手元" width="1168" height="880" loading="lazy"></figure>
+      <figure class="owner__sub">
+        <img src="img/cat.webp" alt="藍色の布の上で眠る三毛猫と、笹に包んだおにぎり" width="1168" height="880" loading="lazy">
+        <figcaption>NIKUKYU＝肉球。ロゴの肉球が目印です。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== まとめ注文 ========== -->
+<section id="bulk" class="sec">
+  <div class="wrap bulk">
+    <figure class="bulk__media" data-reveal><img src="img/box.webp" alt="会議室で、箱に並んだ色とりどりのおにぎりを受け取るところ" width="1168" height="880" loading="lazy"></figure>
+    <div class="bulk__body">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow" data-reveal>まとめ注文</p>
+        <h2 class="h2" data-reveal>会議に、差し入れに、<br>箱でお届け。</h2>
+      </div>
+      <p data-reveal>20個から、前日までのご予約で承ります。少年野球や部活の朝、町内会、会議のお昼に合わせて、朝のお届けにも対応します。具材はおまかせでも、ご希望を組み合わせても。握ってから時間が経ってもおいしい南魚沼のコシヒカリだから、お昼の会議にも安心です。</p>
+      <ol class="steps">
+        <li data-reveal><strong>前日までに DM でご相談</strong><span>日時・個数・お届け先（または受け取り）をお知らせください。</span></li>
+        <li data-reveal><strong>具材と時間を決める</strong><span>ご予算や人数に合わせてご提案します。</span></li>
+        <li data-reveal><strong>当日、握ってお届け</strong><span>できるだけお渡しの直前に握ります。</span></li>
+      </ol>
+      <div data-reveal>
+        <a class="btn btn--ai" href="#contact">まとめ注文の相談をする <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ご予約・お問い合わせ ========== -->
+<section id="contact" class="sec sec--tint">
+  <div class="wrap contact">
+    <div class="contact__body">
+      <p class="eyebrow" data-reveal>ご予約・お問い合わせ</p>
+      <h2 class="h2" data-reveal>Instagram の DM から、<br>お気軽にどうぞ。</h2>
+      <p data-reveal>ご予約、出店のご依頼、まとめ注文のご相談は、すべて Instagram のダイレクトメッセージで受け付けています。右のフォームで文章を作ると、そのまま DM に貼り付けられます。</p>
+      <div class="dm" data-reveal>
+        <div class="dm__row">
+          <span class="dm__handle" id="ig-handle">@onigiri_nikukyu</span>
+          <button class="copy" type="button" data-copy="#ig-handle">IDをコピー</button>
+          <a class="btn btn--line" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram を開く</a>
+        </div>
+        <ul class="dm__uses">
+          <li>平日のご予約</li>
+          <li>出店のご依頼</li>
+          <li>まとめ注文</li>
+          <li>取材など</li>
+        </ul>
+        <p class="dm__line">公式 LINE は準備中です。開設後は、出店予定の配信と予約の受付をこちらでも行います。</p>
+      </div>
+    </div>
+    <form class="form" id="contact-form" data-reveal novalidate>
+      <p class="form__title">DM 用の文章をつくる</p>
+      <p class="form__hint">入力すると、下に DM に貼り付ける文章ができます。</p>
+      <label class="field" for="f-kind">ご用件
+        <select id="f-kind" name="kind">
+          <option>平日のご予約</option>
+          <option>出店のご依頼</option>
+          <option>まとめ注文</option>
+          <option>その他</option>
+        </select>
+      </label>
+      <div class="form__row">
+        <label class="field" for="f-name">お名前（会社名）<input id="f-name" name="name" type="text" autocomplete="name" required></label>
+        <label class="field" for="f-date">希望日時<input id="f-date" name="date" type="text" placeholder="例：10月15日（水）12:00"></label>
+      </div>
+      <label class="field" for="f-count">人数・個数<input id="f-count" name="count" type="text" placeholder="例：30個 / 50名ほど"></label>
+      <label class="field" for="f-body">内容<textarea id="f-body" name="body" placeholder="場所、ご希望の具材、ご予算など"></textarea></label>
+      <div>
+        <button class="btn btn--ai" type="submit">文章をつくる <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="form__out" hidden>
+        <label class="field" for="f-out">できあがった文章<textarea id="f-out" readonly></textarea></label>
+        <div class="form__out-actions">
+          <button class="copy" type="button" data-copy="#f-out">文章をコピー</button>
+          <a class="btn btn--line" href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram で DM を送る</a>
+        </div>
+        <p class="form__done">コピーして、Instagram の DM に貼り付けて送ってください。</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a class="logo" href="#top">
+          <svg class="logo__mark" aria-hidden="true" style="--logo-bg:#ffffff"><use href="#logo"/></svg>
+          <span class="logo__name">おにぎり<small>~NIKUKYU~</small></span>
+        </a>
+        <div class="foot__lines">
+          <span>おにぎり専門キッチンカー｜大阪府</span>
+          <span>南魚沼産コシヒカリ・三陸沖の海苔・握り立て</span>
+          <span>Instagram <a href="https://www.instagram.com/onigiri_nikukyu/" target="_blank" rel="noopener">@onigiri_nikukyu</a></span>
+        </div>
+      </div>
+      <nav class="foot__nav" aria-label="フッターメニュー">
+        <a href="#kodawari">こだわり</a>
+        <a href="#menu-sec">メニュー</a>
+        <a href="#shutten">出店について</a>
+        <a href="#owner">店主のこと</a>
+        <a href="#bulk">まとめ注文</a>
+        <a href="#contact">ご予約・お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 おにぎり〜NIKUKYU〜</span>
+      <span>Enjoy your meal 🍙</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
