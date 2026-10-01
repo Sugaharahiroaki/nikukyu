@@ -54,6 +54,19 @@ img/              写真（WebP）とロゴの元画像。出典は下記
 - 公式 LINE は準備中。開設したらボタンを「お問い合わせ」と「出店について」に足す
 - ロゴは SVG で描き直したもの。正式データがあれば差し替え
 
+## GitHub と公開 URL
+
+- リポジトリ（このフォルダの中身だけを一直線の履歴で置いている）: https://github.com/Sugaharahiroaki/nikukyu
+- GitHub Pages（main ブランチの直下をそのまま配信）: https://sugaharahiroaki.github.io/nikukyu/
+- 更新のしかた：このリポジトリ（tomoni-web-portfolio）の master へコミットしてから
+
+```bash
+bash scripts/github-static-push.sh nikukyu nikukyu
+```
+
+  `scripts/github-static-push.sh` が custom/nikukyu のツリーから、リモートの先端を親にしたコミットを作って push する（force 不要）。
+  反映には GitHub Pages のビルドで1〜2分かかる。
+
 ## 確認のしかた
 
 `index.html` をブラウザで開くだけで見られる（書体と GSAP はネット経由）。
